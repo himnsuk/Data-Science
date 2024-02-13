@@ -1,0 +1,12 @@
+{
+  "name": "data-science",
+  "version": "1.0.0",
+  "description": "This repository will contain learning of Data Science with Python",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
