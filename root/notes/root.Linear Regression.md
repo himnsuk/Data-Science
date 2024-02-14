@@ -62,3 +62,46 @@ To build a strong foundation in regression analysis for interviews or general un
     - Hands-on experience with regression analysis using statistical software (e.g., R, Python with libraries like Statsmodels, scikit-learn)
 
 Understanding these topics will provide you with a comprehensive understanding of regression analysis, preparing you for interviews and enabling you to build robust regression models for data analysis and prediction tasks.
+
+
+Algorithm from scatch:
+---
+---
+
+```py
+import numpy as np
+
+def linear_regression(x, y):
+  """
+  This function performs simple linear regression on the given data.
+
+  Args:
+    x: A 1D NumPy array of independent variables.
+    y: A 1D NumPy array of dependent variables.
+
+  Returns:
+    A tuple containing the slope (m) and intercept (b) of the regression line.
+  """
+  # Calculate mean of x and y
+  mean_x = np.mean(x)
+  mean_y = np.mean(y)
+
+  # Calculate numerator and denominator for slope
+  numerator = np.sum((x - mean_x) * (y - mean_y))
+  denominator = np.sum((x - mean_x) ** 2)
+
+  # Calculate slope and intercept
+  slope = numerator / denominator
+  intercept = mean_y - slope * mean_x
+
+  return slope, intercept
+
+# Example usage
+x = np.array([1, 2, 3, 4, 5])
+y = np.array([2, 4, 5, 4, 5])
+
+m, b = linear_regression(x, y)
+
+print(f"Slope: {m:.4f}, Intercept: {b:.4f}")
+```
+
