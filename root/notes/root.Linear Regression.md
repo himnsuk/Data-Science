@@ -249,11 +249,11 @@ Here's how you calculate the standard error of the regression coefficient in a s
 1. **Fit the regression model**: Estimate the coefficients of the regression equation using a method such as ordinary least squares (OLS) regression.
 
 2. **Calculate the residual standard error (RSE)**: The residual standard error is an estimate of the standard deviation of the error term in the regression model. It represents the average amount that the observed values deviate from the fitted values. It is calculated as:
-$$
+$
    [
    RSE = \sqrt{\frac{1}{n-2} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2}
    ]
-$$
+$
    where:
    - $( n )$ is the number of observations.
    - $( y_i )$ is the observed value of the dependent variable for observation $( i )$.
