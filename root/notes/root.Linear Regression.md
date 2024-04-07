@@ -128,7 +128,7 @@ Here's the step-by-step calculation in more detail:
    
    $[ \bar{y} = \frac{1}{n}\sum_{i=1}^{n} y_i ]$
 
-   where \( n \) is the number of observations and \( y_i \) is each individual observed value.
+   where $( n )$ is the number of observations and $( y_i )$ is each individual observed value.
 
 2. **Total sum of squares (SST):**
    
@@ -249,11 +249,10 @@ Here's how you calculate the standard error of the regression coefficient in a s
 1. **Fit the regression model**: Estimate the coefficients of the regression equation using a method such as ordinary least squares (OLS) regression.
 
 2. **Calculate the residual standard error (RSE)**: The residual standard error is an estimate of the standard deviation of the error term in the regression model. It represents the average amount that the observed values deviate from the fitted values. It is calculated as:
-$$
-   [
+$[
    RSE = \sqrt{\frac{1}{n-2} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2}
    ]
-$$
+$
    where:
    - $( n )$ is the number of observations.
    - $( y_i )$ is the observed value of the dependent variable for observation $( i )$.
@@ -455,15 +454,15 @@ To calculate the joint distribution of two random variables, you need to determi
 
 Here are the steps to calculate the joint distribution:
 
-1. **Define the Random Variables**: Identify the two random variables for which you want to calculate the joint distribution. Let's denote them as \( X \) and \( Y \).
+1. **Define the Random Variables**: Identify the two random variables for which you want to calculate the joint distribution. Let's denote them as $( X )$ and $( Y )$.
 
-2. **Identify Possible Values**: Determine all possible values that each random variable can take. Let's say \( X \) can take values \( x_1, x_2, \ldots, x_m \), and \( Y \) can take values \( y_1, y_2, \ldots, y_n \).
+2. **Identify Possible Values**: Determine all possible values that each random variable can take. Let's say $( X )$ can take values $( x_1, x_2, \ldots, x_m )$, and $( Y )$ can take values $( y_1, y_2, \ldots, y_n )$.
 
-3. **Construct a Table**: Create a table with rows representing the possible values of \( X \) and columns representing the possible values of \( Y \). This table will have \( m \) rows and \( n \) columns.
+3. **Construct a Table**: Create a table with rows representing the possible values of $( X )$ and columns representing the possible values of $( Y )$. This table will have $( m )$ rows and $( n )$ columns.
 
-4. **Assign Probabilities**: For each combination of \( X \) and \( Y \), assign the probability of that particular outcome occurring. This can be obtained from the given probability distribution or empirical data.
+4. **Assign Probabilities**: For each combination of $( X )$ and $( Y )$, assign the probability of that particular outcome occurring. This can be obtained from the given probability distribution or empirical data.
 
-5. **Calculate Joint Probabilities**: The joint probability of each combination of outcomes is the product of the probabilities of the individual outcomes. For example, if \( X \) takes value \( x_i \) and \( Y \) takes value \( y_j \), the joint probability \( P(X = x_i, Y = y_j) \) is calculated as \( P(X = x_i) \times P(Y = y_j) \).
+5. **Calculate Joint Probabilities**: The joint probability of each combination of outcomes is the product of the probabilities of the individual outcomes. For example, if $( X )$ takes value $( x_i )$ and $( Y )$ takes value $( y_j )$, the joint probability $( P(X = x_i, Y = y_j) )$ is calculated as $( P(X = x_i) \times P(Y = y_j) )$.
 
 6. **Normalize (Optional)**: If the joint probabilities do not sum up to 1, you may need to normalize them so that they represent a valid probability distribution.
 
@@ -471,7 +470,7 @@ Here are the steps to calculate the joint distribution:
 
 Here's a simple example to illustrate the calculation of the joint distribution:
 
-Suppose you have two discrete random variables, \( X \) representing the number of heads in two coin tosses, and \( Y \) representing the number of tails. The possible values for each variable are \( X = \{0, 1, 2\} \) and \( Y = \{0, 1, 2\} \).
+Suppose you have two discrete random variables, $( X )$ representing the number of heads in two coin tosses, and $( Y )$ representing the number of tails. The possible values for each variable are $( X = \{0, 1, 2\} )$ and $( Y = \{0, 1, 2\} )$.
 
 Assume that the coin tosses are independent and fair. You can construct the joint distribution table as follows:
 
@@ -485,4 +484,90 @@ X \backslash Y & 0 & 1 & 2 \\
 \end{array}
 \]
 
-In this table, each cell represents the joint probability \( P(X = x_i, Y = y_j) \) for the corresponding values of \( X \) and \( Y \). For example, \( P(X = 1, Y = 1) = 1/2 \) represents the probability of getting one head and one tail in two coin tosses.
+In this table, each cell represents the joint probability $( P(X = x_i, Y = y_j) )$ for the corresponding values of $( X )$ and $( Y )$. For example, $( P(X = 1, Y = 1) = 1/2 )$ represents the probability of getting one head and one tail in two coin tosses.
+
+
+----
+L1 and L2 regularization
+---
+
+L1 and L2 regularization are techniques used in machine learning to prevent overfitting and improve the generalization performance of models. They are commonly used in linear regression, logistic regression, neural networks, and other machine learning algorithms.
+
+1. **L1 Regularization (Lasso Regression):**
+   - In L1 regularization, also known as Lasso (Least Absolute Shrinkage and Selection Operator) regularization, a penalty term is added to the cost function that is proportional to the absolute values of the coefficients.
+   - Mathematically, L1 regularization can be represented as:
+     $[ \text{minimize} \left\{ \sum_{i=1}^{n} (y_i - \beta_0 - \sum_{j=1}^{p} \beta_j x_{ij})^2 + \lambda \sum_{j=1}^{p} |\beta_j| \right\} ]$
+   - L1 regularization tends to produce sparse models by setting many coefficients exactly to zero. It effectively performs feature selection by shrinking less important features' coefficients to zero.
+   - Lasso regression is particularly useful when dealing with high-dimensional data or when you suspect that only a small subset of features are relevant.
+
+2. **L2 Regularization (Ridge Regression):**
+   - In L2 regularization, a penalty term is added to the cost function that is proportional to the square of the magnitude of the coefficients.
+   - Mathematically, L2 regularization can be represented as:
+     $[ \text{minimize} \left\{ \sum_{i=1}^{n} (y_i - \beta_0 - \sum_{j=1}^{p} \beta_j x_{ij})^2 + \lambda \sum_{j=1}^{p} \beta_j^2 \right\} ]$
+   - L2 regularization encourages the weights to be small but does not typically set them exactly to zero. It tends to produce models with more stable and well-conditioned solutions compared to L1 regularization.
+   - Ridge regression is particularly useful when dealing with multicollinearity, as it can reduce the variance of the coefficient estimates and improve the stability of the model.
+
+Both L1 and L2 regularization techniques introduce a hyperparameter $( \lambda )$ (also called the regularization parameter) that controls the strength of the regularization. By adjusting $( \lambda )$, you can control the trade-off between fitting the training data well and preventing overfitting. Regularization is a fundamental technique for improving the generalization performance and robustness of machine learning models.
+
+
+---
+Regularization in ML
+---
+
+Regularization in machine learning is a technique used to prevent overfitting and improve the generalization performance of models. Overfitting occurs when a model learns the training data too well, capturing noise and irrelevant patterns that do not generalize well to unseen data. Regularization methods add additional constraints or penalties to the optimization problem, encouraging simpler models that are less likely to overfit.
+
+There are different types of regularization techniques commonly used in machine learning:
+
+1. **L1 Regularization (Lasso):** L1 regularization adds a penalty term to the cost function that is proportional to the absolute values of the model's coefficients. This encourages sparsity in the model by shrinking less important features' coefficients to zero, effectively performing feature selection.
+
+2. **L2 Regularization (Ridge Regression):** L2 regularization adds a penalty term to the cost function that is proportional to the square of the magnitude of the model's coefficients. This technique tends to produce models with smaller coefficient values, effectively reducing the impact of individual features and mitigating multicollinearity issues.
+
+3. **Elastic Net Regularization:** Elastic Net regularization combines both L1 and L2 regularization by adding penalties from both techniques to the cost function. This method combines the feature selection properties of L1 regularization with the regularization and stability properties of L2 regularization.
+
+4. **Dropout Regularization (for Neural Networks):** Dropout regularization is a technique specifically used in neural networks. During training, random neurons are temporarily dropped out (i.e., set to zero) with a certain probability. This prevents co-adaptation of neurons and encourages the network to learn more robust and generalizable features.
+
+5. **Early Stopping:** Early stopping is a simple form of regularization that stops training the model when the performance on a validation set starts to degrade, thus preventing the model from overfitting to the training data.
+
+6. **Data Augmentation:** Data augmentation is a regularization technique commonly used in deep learning, where the training dataset is artificially augmented by applying transformations such as rotation, translation, scaling, and flipping to create additional training examples. This helps the model learn more robust features and reduces overfitting.
+
+Regularization techniques play a crucial role in training machine learning models by balancing the trade-off between fitting the training data well and generalizing to unseen data. By controlling the complexity of the model and reducing overfitting, regularization helps improve the model's performance on unseen data and enhances its robustness and reliability.
+
+
+---
+Box-Cox Method
+---
+
+The Box-Cox transformation is a statistical technique used to stabilize the variance and/or make the data more normally distributed, which can be beneficial in regression analysis. This transformation is particularly useful when the assumptions of normality and constant variance (homoscedasticity) are violated in the data.
+
+The Box-Cox transformation is defined by a power transformation of the form:
+
+$[ y^{(\lambda)} = \begin{cases} 
+      \frac{y^\lambda - 1}{\lambda} & \text{if } \lambda \neq 0 \\
+      \log(y) & \text{if } \lambda = 0 
+   \end{cases}
+]$
+
+Where:
+- $( y )$ is the original response variable.
+- $( y^{(\lambda)} )$ is the transformed response variable.
+- $( \lambda )$ is the transformation parameter. 
+
+The Box-Cox transformation is a family of transformations, and different values of $( \lambda )$ result in different transformations. The optimal value of $( \lambda )$ is typically chosen to maximize the log-likelihood of the transformed data. This is often done by trying different values of $( \lambda )$ and selecting the one that maximizes a likelihood-based criterion, such as the log-likelihood or AIC.
+
+In the context of regression analysis, the Box-Cox transformation can be applied to the response variable (dependent variable) to address issues such as non-normality and heteroscedasticity. By transforming the response variable, the regression model can better meet the assumptions of normality and constant variance, leading to more reliable parameter estimates and better model performance.
+
+Here's a step-by-step approach to using the Box-Cox transformation in regression analysis:
+
+1. **Identify the Response Variable**: Determine which variable in your regression model is the response variable that you want to transform.
+
+2. **Check Assumptions**: Assess the assumptions of normality and constant variance (homoscedasticity) in the data. You can use diagnostic plots, such as histograms, Q-Q plots, and residual plots, to visually inspect the distribution and variance of the response variable.
+
+3. **Choose a Transformation**: Choose an appropriate transformation based on the characteristics of the response variable and the assumptions of the regression model. This can be done by trying different values of $( \lambda )$ and selecting the one that maximizes a likelihood-based criterion.
+
+4. **Apply the Transformation**: Apply the chosen Box-Cox transformation to the response variable to create a transformed variable.
+
+5. **Run Regression Analysis**: Run the regression analysis using the transformed response variable and the original predictor variables.
+
+6. **Interpret Results**: Interpret the results of the regression analysis in the context of the transformed response variable. Keep in mind that the coefficients of the regression model are now interpreted in terms of the transformed variable, so they may need to be transformed back to the original scale for interpretation.
+
+Overall, the Box-Cox transformation is a valuable tool in regression analysis for addressing issues related to non-normality and heteroscedasticity in the data, and it can help improve the reliability and interpretability of regression models.
