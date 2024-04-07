@@ -1,15 +1,15 @@
 Notations
 ---
 
-![General Math Notation](general-math-notation.png)
+![General Math Notation](images/general-math-notation.png)
 
 ---
 
-![Linear Algebra](general-math-and-linear-algebra.png)
+![Linear Algebra](images/general-math-and-linear-algebra.png)
 
 ---
 
-![Probability Notation](probability-notation.png)
+![Probability Notation](images/probability-notation.png)
 
 ---
 Machine learning/statistics notation
@@ -25,7 +25,7 @@ represent the desired output label. We use z to represent a hidden variable. Som
 use q to represent a hidden discrete variable.
 
 
-![Machine Learning/Statistics Notation](ml-statistics-notations.png)
+![Machine Learning/Statistics Notation](images/ml-statistics-notations.png)
 
 ---
 
@@ -34,7 +34,7 @@ Graphical model notation
 
 In graphical models, we index nodes by s, t, u ∈ V, and states by i, j, k ∈ X.
 
-![Graphical Model Notation](graphical-model-notation.png)
+![Graphical Model Notation](images/graphical-model-notation.png)
 
 ---
 
