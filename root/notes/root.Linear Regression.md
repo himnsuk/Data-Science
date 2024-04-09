@@ -415,7 +415,7 @@ Where:
 
 The goal of MLE is to find the values of $( \beta_0 )$, $( \beta_1 )$, and $( \sigma^2 )$ that maximize this likelihood function. In practice, it's often more convenient to maximize the logarithm of the likelihood function (log-likelihood) because it simplifies calculations and avoids numerical underflow or overflow issues:
 
-$[ \ell(\beta_0, \beta_1, \sigma^2) = \sum_{i=1}^n \left[ -\frac{1}{2} \log(2\pi\sigma^2) - \frac{(y_i - (\beta_0 + \beta_1 x_i))^2}{2\sigma^2} \right] ]$
+$$\left[ \ell(\beta_0, \beta_1, \sigma^2) = \sum_{i=1}^n \left[ -\frac{1}{2} \log(2\pi\sigma^2) - \frac{(y_i - (\beta_0 + \beta_1 x_i))^2}{2\sigma^2} \right] \right]$$
 
 Once the log-likelihood function is maximized, the estimated parameters $( \hat{\beta_0} )$, $( \hat{\beta_1} )$, and $( \hat{\sigma^2} )$ can be obtained.
 
@@ -427,7 +427,7 @@ Normal Distribution
 
 Sure, the formula for a normal distribution is:
 
-$f(x) = \frac{1}{\sigma\sqrt 2\pi} * e^-\frac{(x-μ)^2}{2\sigma^2}$
+$$f(x) = \frac{1}{\sigma\sqrt 2\pi} * e^-\frac{(x-μ)^2}{2\sigma^2}$$
 
 Where:
 - f(x) is the probability density function,
@@ -467,15 +467,15 @@ Suppose you have two discrete random variables, $( X )$ representing the number 
 
 Assume that the coin tosses are independent and fair. You can construct the joint distribution table as follows:
 
-\[
-\begin{array}{c|ccc}
+
+<!-- \begin{array}{c|ccc}
 X \backslash Y & 0 & 1 & 2 \\
 \hline
 0 & 1/4 & 1/4 & 0 \\
 1 & 1/4 & 1/2 & 1/4 \\
 2 & 0 & 1/4 & 1/4 \\
-\end{array}
-\]
+\end{array} -->
+
 
 In this table, each cell represents the joint probability $( P(X = x_i, Y = y_j) )$ for the corresponding values of $( X )$ and $( Y )$. For example, $( P(X = 1, Y = 1) = 1/2 )$ represents the probability of getting one head and one tail in two coin tosses.
 
@@ -489,7 +489,7 @@ L1 and L2 regularization are techniques used in machine learning to prevent over
 1. **L1 Regularization (Lasso Regression):**
    - In L1 regularization, also known as Lasso (Least Absolute Shrinkage and Selection Operator) regularization, a penalty term is added to the cost function that is proportional to the absolute values of the coefficients.
    - Mathematically, L1 regularization can be represented as:
-     $[ \text{minimize} \left\{ \sum_{i=1}^{n} (y_i - \beta_0 - \sum_{j=1}^{p} \beta_j x_{ij})^2 + \lambda \sum_{j=1}^{p} |\beta_j| \right\} ]$
+     $$\left[ \text{minimize} \left\{ \sum_{i=1}^{n} (y_i - \beta_0 - \sum_{j=1}^{p} \beta_j x_{ij})^2 + \lambda \sum_{j=1}^{p} |\beta_j| \right\} \right]$$
    - L1 regularization tends to produce sparse models by setting many coefficients exactly to zero. It effectively performs feature selection by shrinking less important features' coefficients to zero.
    - Lasso regression is particularly useful when dealing with high-dimensional data or when you suspect that only a small subset of features are relevant.
 
