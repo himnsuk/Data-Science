@@ -5,7 +5,7 @@ Conditional probability is a concept in probability theory that deals with the l
 
 Mathematically, the conditional probability of an event $( A )$ occurring given that an event $( B )$ has already occurred is denoted by $( P(A|B) )$, read as "the probability of $( A )$ given $( B )$" and is calculated using the following formula:
 
-$[ P(A|B) = \frac{P(A \cap B)}{P(B)} ]$
+$$[ P(A|B) = \frac{P(A \cap B)}{P(B)} ]$$
 
 Where:
 - $( P(A|B) )$ is the conditional probability of event $( A )$ given event $( B )$.
@@ -22,12 +22,12 @@ Suppose you have a standard deck of 52 playing cards. You draw one card at rando
 
 The conditional probability of drawing a red card given that the drawn card is a heart ($( P(A|B) )$) can be calculated using the formula mentioned above:
 
-$[ P(A|B) = \frac{P(A \cap B)}{P(B)} ]$
+$$[ P(A|B) = \frac{P(A \cap B)}{P(B)} ]$$
 
 Here, $( P(A \cap B) )$ is the probability of drawing a red heart card, which is $( \frac{1}{52} )$ because there is only one red heart card in the deck.
 
 $( P(B) )$ is the probability of drawing any heart card, which is $( \frac{13}{52} )$ because there are 13 hearts in the deck.
 
-So, $( P(A|B) = \frac{\frac{1}{52}}{\frac{13}{52}} = \frac{1}{13} )$.
+So, $$( P(A|B) = \frac{\frac{1}{52}}{\frac{13}{52}} = \frac{1}{13} )$$.
 
 This means that given you've drawn a heart, the probability of it being red is $( \frac{1}{13} )$.

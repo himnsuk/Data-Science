@@ -1,12 +1,13 @@
+Perplexity
+---
+
 Perplexity is a measure commonly used to evaluate the performance of topic models such as Latent Dirichlet Allocation (LDA). It provides a quantitative assessment of how well a topic model predicts a holdout set of documents. A lower perplexity score indicates better predictive performance.
 
 In the context of LDA, perplexity measures how well the model predicts the words in unseen documents. It quantifies how surprised the model is by new data. Intuitively, if the model is able to accurately capture the underlying patterns in the data, it should not be surprised by the words in unseen documents and therefore should have a lower perplexity.
 
 Perplexity is calculated using the following formula:
 
-$$
-\text{Perplexity} = \exp\left\{ -\frac{\sum_{d=1}^{D} \log p(\mathbf{w}_d)}{\sum_{d=1}^{D} N_d} \right\}
-$$
+$$\text{Perplexity} = \exp\left\{ -\frac{\sum_{d=1}^{D} \log p(\mathbf{w}_d)}{\sum_{d=1}^{D} N_d} \right\}$$
 
 Where:
 - $( D )$ is the number of documents in the holdout set.
