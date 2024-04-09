@@ -256,11 +256,7 @@ $$RSE = \sqrt{\frac{1}{n-2} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2}$$
    - $( \hat{y}_i )$ is the predicted value of the dependent variable for observation $( i )$ based on the regression model.
 
 3. **Calculate the standard error of the regression coefficient**: For a simple linear regression model with one independent variable, the standard error of the regression coefficient ($( SE(\beta_1) )$) is given by:
-$$
-   [
-   SE(\beta_1) = \frac{RSE}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2}}
-   ]
-$$
+$$\left[SE(\beta_1) = \frac{RSE}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2}}\right]$$
    where:
    - $( x_i )$ is the value of the independent variable for observation $( i )$.
    - $( \bar{x} )$ is the mean of the independent variable.
