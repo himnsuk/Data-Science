@@ -4,7 +4,7 @@ In the context of LDA, perplexity measures how well the model predicts the words
 
 Perplexity is calculated using the following formula:
 
-$[ \text{Perplexity} = \exp\left\{ -\frac{\sum_{d=1}^{D} \log p(\mathbf{w}_d)}{\sum_{d=1}^{D} N_d} \right\} ]$
+$$\text{Perplexity} = \exp\left\{ -\frac{\sum_{d=1}^{D} \log p(\mathbf{w}_d)}{\sum_{d=1}^{D} N_d} \right\}$$
 
 Where:
 - $( D )$ is the number of documents in the holdout set.
