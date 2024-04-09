@@ -255,8 +255,8 @@ $$RSE = \sqrt{\frac{1}{n-2} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2}$$
    - $( y_i )$ is the observed value of the dependent variable for observation $( i )$.
    - $( \hat{y}_i )$ is the predicted value of the dependent variable for observation $( i )$ based on the regression model.
 
-3. **Calculate the standard error of the regression coefficient**: For a simple linear regression model with one independent variable, the standard error of the regression coefficient ($( SE(\beta_1) )$) is given by:
-$$\left[SE(\beta_1) = \frac{RSE}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2}}\right]$$
+3. **Calculate the standard error of the regression coefficient**: For a simple linear regression model with one independent variable, the standard error of the regression coefficient $( SE(\beta_1) )$ is given by:
+$$\left[SE(\beta_1) = \frac{RSE}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2}} \right]$$
    where:
    - $( x_i )$ is the value of the independent variable for observation $( i )$.
    - $( \bar{x} )$ is the mean of the independent variable.
@@ -315,7 +315,7 @@ Correlation and covariance are both statistical measures that describe the relat
 
 Covariance is a measure that indicates the extent to which two variables change together. It is a measure of how much two random variables vary together. If the covariance is positive, it means that the variables tend to increase or decrease together. If the covariance is negative, it means that as one variable increases, the other tends to decrease, and vice versa.
 
-- **Formula**: $(Cov(X, Y) = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y}))$
+- **Formula**: $$(Cov(X, Y) = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y}))$$
 - **Properties**:
  - Covariance is sensitive to the units of the variables. Large values of covariance indicate a strong relationship between the variables, while small values indicate a weak relationship.
  - The covariance of a variable with itself is its variance.
@@ -407,7 +407,7 @@ The likelihood function in linear regression is typically expressed as the joint
 
 Mathematically, if we denote the observed data as $( { (x_i, y_i) }_{i=1}^n ) where ( x_i )$ represents the independent variable and $( y_i )$ represents the corresponding dependent variable, and if we assume that the errors follow a normal distribution, the likelihood function can be written as:
 
-$[ L(\beta_0, \beta_1, \sigma^2) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(y_i - (\beta_0 + \beta_1 x_i))^2}{2\sigma^2}\right) ]$
+$$\left[ L(\beta_0, \beta_1, \sigma^2) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(y_i - (\beta_0 + \beta_1 x_i))^2}{2\sigma^2}\right) \right]$$
 
 Where:
 - $( \beta_0 )$ and $( \beta_1 )$ are the intercept and slope coefficients of the regression equation, respectively.
